@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser</title>
+    <link rel="stylesheet" type="text/css" href="Assignment5_styles.css">
+</head>
+<body>
+
+<div class="centered-container">
+    <h1>Browser Information</h1>
+
+    <!-- Display area for screen dimensions -->
+    <p id="screenInfo" class="info-paragraph"></p>
+</div>
+
+<script>
+    function updateScreenInfo() {
+        var info = 'Screen Width: ' + screen.width +
+                   ', Screen Height: ' + screen.height +
+                   ', Available Screen Width: ' + screen.availWidth +
+                   ', Available Screen Height: ' + screen.availHeight +
+                   ', Color Depth: ' + screen.colorDepth +
+                   ', Pixel Depth: ' + screen.pixelDepth;
+
+        document.getElementById('screenInfo').innerText = info;
+    }
+
+    // Call the function on load and on resize
+    window.onload = updateScreenInfo;
+    window.onresize = updateScreenInfo;
+</script>
+
+</body>
+</html>
+
